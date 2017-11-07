@@ -1,5 +1,19 @@
-const MODULE = require('../index');
+const assert = require('../index');
 
-if (!Object.keys(MODULE).length) {
-  throw new Error('MODULE was not exported');
-}
+const obj1 = {
+  a: {
+    b: 1
+  }
+};
+const obj2 = {
+  a: {
+    b: 2
+  }
+};
+const obj3 = {
+  a: {
+    b: 1
+  }
+};
+
+assert.deepEqual(obj1, obj3);
